@@ -1,0 +1,19 @@
+.project
+.classpath
+target
+.settings/
+.springBeans
+.idea
+*.iws
+*.iml
+*.ipr
+/out/
+/bin/
+
+## MacOS ###
+.DS_Store
+
+# eclipse project file
+.settings/
+.classpath
+.project
