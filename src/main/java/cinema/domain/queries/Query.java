@@ -1,2 +1,4 @@
-package cinema.domain.queries;public interface Query {
+package cinema.domain.queries;
+
+public interface Query {
 }

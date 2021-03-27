@@ -1,2 +1,4 @@
-package cinema.domain.events;public interface Event {
+package cinema.domain.events;
+
+public interface Event {
 }

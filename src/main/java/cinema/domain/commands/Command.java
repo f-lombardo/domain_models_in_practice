@@ -1,2 +1,4 @@
-package cinema.domain.commands;public interface Command {
+package cinema.domain.commands;
+
+public interface Command {
 }

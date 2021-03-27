@@ -6,14 +6,10 @@ import cinema.domain.events.SeatHasBeenReserved;
 
 import java.util.*;
 
-/*
- The Aggregate that protects the invariants around reserving seats
- Ensures transactional consistent and domain-correct behaviour for all involved classes
-*/
-public class ScreeningReservationState {
+public class ScreeningReservationsState {
     public final Map<UUID, List<UUID>> screenings = new HashMap();
 
-    public ScreeningReservationState(List<Event> events) {
+    public ScreeningReservationsState(Iterable<Event> events) {
         for (Event event: events) {
             if (event instanceof ScreeningHasBeenPlanned) {
                 apply((ScreeningHasBeenPlanned) event);
