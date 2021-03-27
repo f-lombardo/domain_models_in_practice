@@ -22,7 +22,7 @@ public class CommandSideTest extends TestBase {
     }
 
     @Test
-    public void An_already_reserved_seat_cannot_be_reserved() {
+    public void anAlreadyReservedSeatCannotBeReserved() {
         given(
             screeningHasBeenPlanned(Screening_1, December_2nd_2020, Cinema_1),
             seatHasBeenReserved(Screening_1, Seat_A1, Tina) );
