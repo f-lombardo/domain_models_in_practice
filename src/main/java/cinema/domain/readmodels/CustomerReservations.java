@@ -7,7 +7,7 @@ import cinema.domain.values.Reservation;
 import java.util.*;
 
 public class CustomerReservations {
-    public final Map<UUID, List<Reservation>> reservations = new HashMap<>();
+    private final Map<UUID, List<Reservation>> reservations = new HashMap<>();
 
     public CustomerReservations(Iterable<Event> history) {
         for (Event event: history) {
@@ -30,5 +30,9 @@ public class CustomerReservations {
             reservations.put(e.customer, new ArrayList<Reservation>());
         }
         reservations.get(e.customer).add(new Reservation(e.screening, e.seat));
+    }
+
+    public List<Reservation> reservationsFor(UUID customer) {
+        return reservations.get(customer);
     }
 }

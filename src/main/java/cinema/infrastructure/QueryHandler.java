@@ -24,7 +24,7 @@ public class QueryHandler {
     public void handle(Query query) {
         if (query instanceof MyReservations) {
             MyReservations q = (MyReservations) query;
-            respond.accept(new ReservationInfo(readmodel.reservations.get(q.customer)));
+            respond.accept(new ReservationInfo(readmodel.reservationsFor(q.customer)));
             // Did I just forget to check if the customer actually exist?
             // Well, there would never be a query with an illegal customer, right? :D:D:D
         }
